@@ -48,7 +48,7 @@
 	    
 	    // Prepare the email parameters
 	    const emailParams = {
-	        to_email: "adrien.bernard@renault-trucks.com", // Replace with your recipient email
+	        to_email: "api.diagplug@renault-trucks.com", // Replace with your recipient email
 	        from_name: "DiagPlug",
 	        message: JSON.stringify(pathHistory)
 	    };
@@ -57,14 +57,7 @@
 	    emailjs.init("wPtdRcq6cgLTj_7k2"); // Replace with your EmailJS user ID
 	    
 	    // Send the email
-	    emailjs.send("service_l3cxcwo", "template_nvm8csh", emailParams)
-	        .then(function(response) {
-	            alert("Le résumé du diagnostic a été envoyé avec succès!");
-	            console.log("SUCCESS", response);
-	        }, function(error) {
-	            alert("L'envoi a échoué. Veuillez réessayer.");
-	            console.log("FAILED", error);
-	        });
+	    emailjs.send("service_l3cxcwo", "template_nvm8csh", emailParams);
 	}
 	    
 	function displayPathHistory() {
