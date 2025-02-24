@@ -117,7 +117,7 @@
                         userInputs[nodeId] = input.value;
                         addToHistory(node.nodeId, node.question, input.value);
                     } else if (text !== "Recommencer") {
-                        addToHistory(node.question, text);
+                        addToHistory(node.nodeId, node.question, text);
                     }
                     
                     if (text === "Recommencer") {
