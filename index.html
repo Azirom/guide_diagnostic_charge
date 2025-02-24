@@ -50,8 +50,7 @@
 	    const emailParams = {
 	        to_email: "adrien.bernard@renault-trucks.com", // Replace with your recipient email
 	        from_name: "DiagPlug",
-	        message: historyText,
-	        path_history_json: JSON.stringify(pathHistory) // Also send the raw JSON
+	        message: JSON.stringify(pathHistory)
 	    };
 	    
 	    // Initialize EmailJS with your user ID
