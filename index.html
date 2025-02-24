@@ -115,9 +115,9 @@
                     if (node.input) {
                         const input = document.getElementById('userInput');
                         userInputs[nodeId] = input.value;
-                        addToHistory(node.nodeId, node.question, input.value);
+                        addToHistory(nodeId, node.question, input.value);
                     } else if (text !== "Recommencer") {
-                        addToHistory(node.nodeId, node.question, text);
+                        addToHistory(nodeId, node.question, text);
                     }
                     
                     if (text === "Recommencer") {
