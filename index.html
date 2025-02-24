@@ -6,6 +6,7 @@
     <title>DiagPlug</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <div class="logo-container">
@@ -29,15 +30,45 @@
         let currentNode = 'start';
         let userInputs = {};
         let pathHistory = [];
-
-        function addToHistory(question, answer) {
+	    
+	function addToHistory(question, answer) {
             pathHistory.push({
                 question: question,
                 answer: answer
             });
         }
 
-        function displayPathHistory() {
+        function sendEmail() {
+	    // Convert path history to a readable format
+	    let historyText = "Version du guide diagnostic: " + decisionTree.version + "\n\n";
+	    pathHistory.forEach(item => {
+	        historyText += "Question: " + item.question + "\n";
+	        historyText += "Réponse: " + item.answer + "\n\n";
+	    });
+	    
+	    // Prepare the email parameters
+	    const emailParams = {
+	        to_email: "adrien.bernard@renault-trucks.com", // Replace with your recipient email
+	        from_name: "DiagPlug",
+	        message: historyText,
+	        path_history_json: JSON.stringify(pathHistory) // Also send the raw JSON
+	    };
+	    
+	    // Initialize EmailJS with your user ID
+	    emailjs.init("wPtdRcq6cgLTj_7k2"); // Replace with your EmailJS user ID
+	    
+	    // Send the email
+	    emailjs.send("service_l3cxcwo", "template_nvm8csh", emailParams)
+	        .then(function(response) {
+	            alert("Le résumé du diagnostic a été envoyé avec succès!");
+	            console.log("SUCCESS", response);
+	        }, function(error) {
+	            alert("L'envoi a échoué. Veuillez réessayer.");
+	            console.log("FAILED", error);
+	        });
+	}
+	    
+	function displayPathHistory() {
             const historyContainer = document.getElementById('pathHistory');
             if (pathHistory.length > 0) {
                 let html = '<div class="path-history">';
@@ -70,6 +101,7 @@
             if (node.isEndpoint) {
                 questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
                 displayPathHistory();
+		sendEmail();
 	} else {
                 questionElement.textContent = node.question;
                 document.getElementById('pathHistory').innerHTML = '';
