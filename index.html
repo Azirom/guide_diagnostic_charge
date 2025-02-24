@@ -180,25 +180,6 @@
             }
         }
 
-        function submitToForm(surveyPath) {
-		const formData = new FormData();
-    
-		// Convert your survey path data to string
-    		const dataString = JSON.stringify({
-        		timestamp: new Date().toISOString(),
-        		path: surveyPath
-    		});
-    
-    		// Get this ID from your form's HTML source
-    		formData.append('r3e55fcb3dbe24872b926a3854620365c', dataString);  // Replace with your actual form field ID
-    
-    		fetch('https://forms.office.com/Pages/ResponsePage.aspx?id=rpNU8pgc10GKMwvnX1_mA3HFr9SUeNBGkOPNMEcX4phUQzdSMkpNN0tGVkhLS0RXWUkxM09JNjJJOC4u', {
-        		method: 'POST',
-        		mode: 'no-cors',
-        		body: formData
-    		});
-	}
-
 	function showNode(nodeId) {
             const node = decisionTree[nodeId];
             const questionElement = document.getElementById('questionText');
@@ -206,7 +187,6 @@
             if (node.isEndpoint) {
                 questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
                 displayPathHistory();
-		submitToForm(pathHistory);
 	} else {
                 questionElement.textContent = node.question;
                 document.getElementById('pathHistory').innerHTML = '';
