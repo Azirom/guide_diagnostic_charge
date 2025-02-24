@@ -31,9 +31,10 @@
         let userInputs = {};
         let pathHistory = [];
 	    
-	function addToHistory(question, answer) {
+	function addToHistory(questionID, question, answer) {
             pathHistory.push({
-                question: question,
+                questionID: questionID,
+		question: question,
                 answer: answer
             });
         }
@@ -47,8 +48,6 @@
 
 	    // Prepare the email parameters
 	    const emailParams = {
-	        to_email: "api.diagplug@renault-trucks.com", // Replace with your recipient email
-	        from_name: "DiagPlug",
 	        message: historyJSON
 	    };
 	    
@@ -116,7 +115,7 @@
                     if (node.input) {
                         const input = document.getElementById('userInput');
                         userInputs[nodeId] = input.value;
-                        addToHistory(node.question, input.value);
+                        addToHistory(node.nodeId, node.question, input.value);
                     } else if (text !== "Recommencer") {
                         addToHistory(node.question, text);
                     }
