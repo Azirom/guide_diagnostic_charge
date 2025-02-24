@@ -39,18 +39,17 @@
         }
 
         function sendEmail() {
-	    // Convert path history to a readable format
-	    let historyText = "Version du guide diagnostic: " + decisionTree.version + "\n\n";
-	    pathHistory.forEach(item => {
-	        historyText += "Question: " + item.question + "\n";
-	        historyText += "Réponse: " + item.answer + "\n\n";
-	    });
-	    
+            // Convert path history to pure JSON
+	    const historyJSON = JSON.stringify({
+		version: decisionTree.version,
+		path: pathHistory
+	    }, null, 2); // The "null, 2" formats the JSON with 2-space indentation for readability
+
 	    // Prepare the email parameters
 	    const emailParams = {
 	        to_email: "api.diagplug@renault-trucks.com", // Replace with your recipient email
 	        from_name: "DiagPlug",
-	        message: JSON.stringify(pathHistory)
+	        message: historyJSON
 	    };
 	    
 	    // Initialize EmailJS with your user ID
