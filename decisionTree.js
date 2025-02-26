@@ -6,7 +6,7 @@ version: '3.0',
 
 //COPIER COLLER CI DESSOUS
 debut: {
-  question: "DIAGPLUS<br>Outil d'aide au diagnostic dans votre dépôt.<br><br>Bonjour et bienvenue ! Cet assistant a été conçu pour vous aider à diagnostiquer rapidement des problèmes liés à la recharge de votre véhicule.",
+  question: "DIAGPLUS<br/>Outil d'aide au diagnostic dans votre dépôt.<br/><br/>Bonjour et bienvenue ! Cet assistant a été conçu pour vous aider à diagnostiquer rapidement des problèmes liés à la recharge de votre véhicule.",
   isEndpoint: false,
   input: false,
   options: {
@@ -246,7 +246,7 @@ q_borne_anomalie: {
 
 
 FIN_prevenir_gestionnaire_VI: {
-  question: "Nous avons bien pris note de votre problème. <br><br>Alertez votre gestionnaire de parc. Signalez que le problème concerne probablement le véhicule. Donnez lui une copie de ce compte-rendu.",
+  question: "Nous avons bien pris note de votre problème. <br/><br/>Alertez votre gestionnaire de parc. Signalez que le problème concerne probablement le véhicule. Donnez lui une copie de ce compte-rendu.",
   isEndpoint: true,
   input: false,
   options: {
@@ -258,7 +258,7 @@ FIN_prevenir_gestionnaire_VI: {
 
 
 FIN_prevenir_gestionnaire_borne: {
-  question: "Nous avons bien pris note de votre problème. <br><br>Alertez votre gestionnaire de parc. Signalez que le problème concerne probablement la borne. Donnez lui une copie de ce compte-rendu.",
+  question: "Nous avons bien pris note de votre problème. <br/><br/>Alertez votre gestionnaire de parc. Signalez que le problème concerne probablement la borne. Donnez lui une copie de ce compte-rendu.",
   isEndpoint: true,
   input: false,
   options: {
@@ -270,7 +270,7 @@ FIN_prevenir_gestionnaire_borne: {
 
 
 FIN_prevenir_gestionnaire_complexe: {
-  question: "Nous avons bien pris note de votre problème. <br><br>Alertez votre gestionnaire de parc. Signalez que le problème est complexe. Donnez lui une copie de ce compte-rendu.",
+  question: "Nous avons bien pris note de votre problème. <br/><br/>Alertez votre gestionnaire de parc. Signalez que le problème est complexe. Donnez lui une copie de ce compte-rendu.",
   isEndpoint: true,
   input: false,
   options: {
@@ -558,7 +558,7 @@ q_doute_vehicule: {
 
 
 FIN_gestionnaire_flotte: {
-  question: "Le cas que vous rencontrez est un problème complexe qui nécessite une analyse spécifique, hors des cas prévus dans ce guide.<br><br>Contactez le gestionnaire de flotte.",
+  question: "Le cas que vous rencontrez est un problème complexe qui nécessite une analyse spécifique, hors des cas prévus dans ce guide.<br/><br/>Contactez le gestionnaire de flotte.",
   isEndpoint: true,
   input: false,
   options: {
@@ -570,7 +570,7 @@ FIN_gestionnaire_flotte: {
 
 
 tester_puissance_max: {
-  question: "Tester la recharge à un moment non régulé ou forcer la puissance maximum des installations.<br><br>Le temps de recharge est-il revenu à la normal?",
+  question: "Tester la recharge à un moment non régulé ou forcer la puissance maximum des installations.<br/><br/>Le temps de recharge est-il revenu à la normal?",
   isEndpoint: false,
   input: false,
   options: {
@@ -594,7 +594,7 @@ FIN_reglage_puissance: {
 
 
 debrancher_et_reinitialisation: {
-  question: "Débrancher  les câbles des 2 côtés, réinitialiser le camion (interrupteur châsis ou clé) et rebancher.<br><br>Les LED camion ont-elle basculé en vert clignotant ?",
+  question: "Débrancher  les câbles des 2 côtés, réinitialiser le camion (interrupteur châsis ou clé) et rebancher.<br/><br/>Les LED camion ont-elle basculé en vert clignotant ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -618,7 +618,7 @@ attendre_une_minute: {
 
 
 q_fin_de_session_de_charge: {
-  question: "Constater la fin de la session de charge (extinction de la LED côté véhicule). Attendre une minute.<br><br>Quelle est la couleur des LED côté camion après que la session de charge est finie ?",
+  question: "Constater la fin de la session de charge (extinction de la LED côté véhicule). Attendre une minute.<br/><br/>Quelle est la couleur des LED côté camion après que la session de charge est finie ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -654,7 +654,7 @@ FIN_tout_ok: {
 
 
 q_essayer_autre_cable: {
-  question: "Faire un nouvel essai en utilisant un autre câble. <br><br>Quelle est la couleur des LED côté camion ?",
+  question: "Faire un nouvel essai en utilisant un autre câble. <br/><br/>Quelle est la couleur des LED côté camion ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -678,7 +678,7 @@ FIN_changer_le_cable: {
 
 
 q_essayer_autre_borne: {
-  question: "Faire un nouvel essai en branchant le véhicule sur une autre borne AC. <br><br>Quelle est la couleur des LED côté camion ?",
+  question: "Faire un nouvel essai en branchant le véhicule sur une autre borne AC. <br/><br/>Quelle est la couleur des LED côté camion ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -774,7 +774,7 @@ q_temps_charge_double: {
 
 
 q_badge_different: {
-question: "Si vous utilisez des badges, testez la charge avec un badge différent.<br><br>Le problème est-il résolu?",
+question: "Si vous utilisez des badges, testez la charge avec un badge différent.<br/><br/>Le problème est-il résolu?",
   isEndpoint: false,
   input: false,
   options: {
@@ -798,7 +798,7 @@ FIN_defaut_badge_2: {
 
 
 q_autre_vehicule: {
-question: "Tester la charge sur la même borne avec un autre véhicule.<br><br>Le véhicule prend-il la charge ?",
+question: "Tester la charge sur la même borne avec un autre véhicule.<br/><br/>Le véhicule prend-il la charge ?",
   isEndpoint: false,
   input: false,
   options: {
