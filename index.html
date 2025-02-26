@@ -70,7 +70,7 @@
             
             if (node.isEndpoint) {
                 questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
-                addToHistory(nodeId, node.question, "");
+                addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
 		displayPathHistory();
 	    } else {
                 questionElement.innerHTML = node.question;
