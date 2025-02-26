@@ -234,7 +234,7 @@ debrancher_rebrancher: {
 
 
 q_borne_anomalie: {
-  question: "Quand vous avez badgé, avez-vous relevé une erreur / un comportement anormal sur la borne ?",
+  question: "Quand vous avez badgé, avez-vous relevé une erreur ou un comportement anormal sur la borne ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -366,7 +366,7 @@ q_badge: {
 
 
 q_comportement_badge: {
-  question: "Quand vous avez badgé, avez-vous relevé une erreur / un comportement anormal ?",
+  question: "Quand vous avez badgé, avez-vous relevé une erreur ou un comportement anormal ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -546,7 +546,7 @@ q_regulation: {
 
 
 q_doute_vehicule: {
-  question: "Le défaut est-il reproductible à votre dépôt avec une configuration borne / camion identique?",
+  question: "Le défaut est-il reproductible à votre dépôt avec une configuration borne et camion identique?",
   isEndpoint: false,
   input: false,
   options: {
@@ -630,7 +630,7 @@ q_fin_de_session_de_charge: {
 
 
 FIN_cas_non_prevu: {
-  question: "Ce cas n'est pas encore prévu dans cette maquette;",
+  question: "Ce cas n'est pas encore prévu dans cette maquette",
   isEndpoint: true,
   input: false,
   options: {
@@ -774,9 +774,7 @@ q_temps_charge_double: {
 
 
 q_badge_different: {
-"  question: ""Si vous utilisez des badges, testez la charge avec un badge différent.<br><br>Le problème est-il résolu?
-
-"","
+question: "Si vous utilisez des badges, testez la charge avec un badge différent.<br><br>Le problème est-il résolu?",
   isEndpoint: false,
   input: false,
   options: {
@@ -800,8 +798,7 @@ FIN_defaut_badge_2: {
 
 
 q_autre_vehicule: {
-"  question: ""Tester la charge sur la même borne avec un autre véhicule.<br><br>Le véhicule prend-il la charge ?
-"","
+question: "Tester la charge sur la même borne avec un autre véhicule.<br><br>Le véhicule prend-il la charge ?",
   isEndpoint: false,
   input: false,
   options: {
