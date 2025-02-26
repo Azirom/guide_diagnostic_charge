@@ -4,7 +4,6 @@ const decisionTree = {
 
 version: '3.0',
 
-//COPIER COLLER CI DESSOUS
 debut: {
   question: "DIAGPLUS<br/>Outil d'aide au diagnostic dans votre dépôt.<br/><br/>Bonjour et bienvenue ! Cet assistant a été conçu pour vous aider à diagnostiquer rapidement des problèmes liés à la recharge de votre véhicule.",
   isEndpoint: false,
@@ -234,7 +233,7 @@ debrancher_rebrancher: {
 
 
 q_borne_anomalie: {
-  question: "Quand vous avez badgé, avez-vous relevé une erreur ou un comportement anormal sur la borne ?",
+  question: "Quand vous avez badgé, avez-vous relevé une erreur / un comportement anormal sur la borne ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -366,7 +365,7 @@ q_badge: {
 
 
 q_comportement_badge: {
-  question: "Quand vous avez badgé, avez-vous relevé une erreur ou un comportement anormal ?",
+  question: "Quand vous avez badgé, avez-vous relevé une erreur / un comportement anormal ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -474,7 +473,7 @@ q_charge_suffisante: {
 
 
 q_chargeur_DC: {
-  question: "Avez-vous accès à une borne DC >100kw au dépôt ou à proximité ?<br/><br/><a href='https://tinyurl.com/ChargingMapTrucks'>Carte des bornes</a>",
+  question: "Avez-vous accès à une borne DC >100kw au dépôt ou à proximité ?<br/><br/><a href='https://tinyurl.com/ChargingMapTrucks'  target='_blank'>Carte des bornes</a>",
   isEndpoint: false,
   input: false,
   options: {
@@ -546,7 +545,7 @@ q_regulation: {
 
 
 q_doute_vehicule: {
-  question: "Le défaut est-il reproductible à votre dépôt avec une configuration borne et camion identique?",
+  question: "Le défaut est-il reproductible à votre dépôt avec une configuration borne / camion identique?",
   isEndpoint: false,
   input: false,
   options: {
@@ -630,7 +629,7 @@ q_fin_de_session_de_charge: {
 
 
 FIN_cas_non_prevu: {
-  question: "Ce cas n'est pas encore prévu dans cette maquette",
+  question: "Ce cas n'est pas encore prévu dans cette maquette;",
   isEndpoint: true,
   input: false,
   options: {
@@ -774,7 +773,7 @@ q_temps_charge_double: {
 
 
 q_badge_different: {
-question: "Si vous utilisez des badges, testez la charge avec un badge différent.<br/><br/>Le problème est-il résolu?",
+  question: "Si vous utilisez des badges, testez la charge avec un badge différent.<br/><br/>Le problème est-il résolu?",
   isEndpoint: false,
   input: false,
   options: {
@@ -798,14 +797,414 @@ FIN_defaut_badge_2: {
 
 
 q_autre_vehicule: {
-question: "Tester la charge sur la même borne avec un autre véhicule.<br/><br/>Le véhicule prend-il la charge ?",
+"  question: ""Tester la charge sur la même borne avec un autre véhicule.<br/><br/>Le véhicule prend-il la charge ?
+"","
   isEndpoint: false,
   input: false,
   options: {
     "Oui": "q_reinit_borne",
     "Non": "FIN_installation_charge" }  }
- 
-//COPIER COLLER CI DESSUS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 };
 
 export default decisionTree;
