@@ -6,7 +6,6 @@
     <title>DiagPlug</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <div class="logo-container">
@@ -39,25 +38,6 @@
             });
         }
 
-        function sendEmail() {
-            // Convert path history to pure JSON
-	    const historyJSON = JSON.stringify({
-		version: decisionTree.version,
-		path: pathHistory
-	    }, null, 2); // The "null, 2" formats the JSON with 2-space indentation for readability
-
-	    // Prepare the email parameters
-	    const emailParams = {
-	        message: historyJSON
-	    };
-	    
-	    // Initialize EmailJS with your user ID
-	    emailjs.init("wPtdRcq6cgLTj_7k2"); // Replace with your EmailJS user ID
-	    
-	    // Send the email
-	    emailjs.send("service_l3cxcwo", "template_nvm8csh", emailParams);
-	}
-	    
 	function displayPathHistory() {
             const historyContainer = document.getElementById('pathHistory');
             if (pathHistory.length > 0) {
@@ -90,9 +70,10 @@
             
             if (node.isEndpoint) {
                 questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
-                displayPathHistory();
+                addToHistory(nodeId, node.question, "");
+		displayPathHistory();
 		sendEmail();
-	} else {
+	    } else {
                 questionElement.innerHTML = node.question;
                 document.getElementById('pathHistory').innerHTML = '';
             }
@@ -128,7 +109,7 @@
                     showNode(nextNode);
                 };
                 
-                if (node.isEndpoint && text === "Recommencer") {
+                if (node.isEndpoint) {
                     button.className = 'restart-button';
                 }
                 
