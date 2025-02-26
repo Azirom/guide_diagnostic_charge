@@ -474,7 +474,7 @@ q_charge_suffisante: {
 
 
 q_chargeur_DC: {
-  question: "Avez-vous accès à une borne DC >100kw au dépôt ou à proximité ?<br><a href='https://tinyurl.com/ChargingMapTrucks'>Carte des bornes</a>",
+  question: "Avez-vous accès à une borne DC >100kw au dépôt ou à proximité ?",
   isEndpoint: false,
   input: false,
   options: {
@@ -806,7 +806,6 @@ question: "Tester la charge sur la même borne avec un autre véhicule.<br><br>L
     "Non": "FIN_installation_charge" }  }
  
 //COPIER COLLER CI DESSUS
-  
 };
 
 export default decisionTree;
