@@ -797,8 +797,7 @@ FIN_defaut_badge_2: {
 
 
 q_autre_vehicule: {
-"  question: ""Tester la charge sur la même borne avec un autre véhicule.<br/><br/>Le véhicule prend-il la charge ?
-"","
+  question: "Tester la charge sur la même borne avec un autre véhicule.<br/><br/>Le véhicule prend-il la charge ?",
   isEndpoint: false,
   input: false,
   options: {
