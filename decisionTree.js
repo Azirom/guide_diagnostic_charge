@@ -5,7 +5,7 @@ const decisionTree = {
 version: '3.0',
 
 debut: {
-  question: "DIAGPLUS<br/>Outil d'aide au diagnostic dans votre dépôt.<br/><br/>Bonjour et bienvenue ! Cet assistant a été conçu pour vous aider à diagnostiquer rapidement des problèmes liés à la recharge de votre véhicule.",
+  question: "<b>DIAGPLUS</b><br/><br/>Bonjour et bienvenue ! Cet assistant a été conçu pour vous aider à diagnostiquer rapidement des problèmes liés à la recharge de votre véhicule.",
   isEndpoint: false,
   input: false,
   options: {
