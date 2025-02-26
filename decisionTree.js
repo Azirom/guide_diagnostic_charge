@@ -2,7 +2,7 @@
 
 const decisionTree = {
 
-version: '3.0',
+version: '3.1',
 
 debut: {
   question: "<b>DIAGPLUS</b><br/><br/>Bonjour et bienvenue ! Cet assistant a été conçu pour vous aider à diagnostiquer rapidement des problèmes liés à la recharge de votre véhicule.",
