@@ -75,10 +75,12 @@
 	function showNode(nodeId) {
             const node = decisionTree[nodeId];
             const questionElement = document.getElementById('questionText');
-            
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+
             if (node.isEndpoint) {
 		questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
-		
+		    
 		// Send email button
 	        const sendEmailButton = document.createElement('button');
 	        sendEmailButton.textContent = 'Envoyer la synthèse par email';
@@ -94,9 +96,6 @@
                 questionElement.innerHTML = node.question;
                 document.getElementById('pathHistory').innerHTML = '';
             }
-            
-            const optionsContainer = document.getElementById('options');
-            optionsContainer.innerHTML = '';
             
             if (node.input) {
                 const input = document.createElement('input');
