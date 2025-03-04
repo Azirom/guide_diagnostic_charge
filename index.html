@@ -67,7 +67,9 @@
 	function sendEmail(pathHistory) {
 		const recipientEmail = "benoit.plassat@renault-trucks.com";
 		const subject = "Resultats DiagPlug";
-		const body = `${JSON.stringify(pathHistory, null, 2)}`;
+		const body = pathHistory.map(item => {
+    			return `Question: ${item.question}\nAnswer: ${item.answer}\n`;
+  		}).join("\n"); // Join with newline characters	
 		const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 		// Create a temporary <a> element
 		const link = document.createElement('a');
@@ -88,6 +90,9 @@
 
             if (node.isEndpoint) {
 		questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
+
+		//Add conclusion to path
+		addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
 		    
 		// Send email button
 	        const sendEmailButton = document.createElement('button');
@@ -97,8 +102,8 @@
 	        };
 		sendEmailButton.className ='send-email-button';
        		optionsContainer.appendChild(sendEmailButton); 
-		
-		addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
+
+		//display path history
 		displayPathHistory();    
 		    
 	    } else {
