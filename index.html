@@ -64,6 +64,14 @@
             }
         }
 
+	function sendEmail(pathHistory) {
+		  const recipientEmail = "benoit.plassat@renault-trucks.com";
+		  const subject = "Resultats DiagPlug";
+		  const body = `${JSON.stringify(pathHistory, null, 2)}`;
+		  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+		  window.location.href = mailtoLink;
+	}
+	    
 	function showNode(nodeId) {
             const node = decisionTree[nodeId];
             const questionElement = document.getElementById('questionText');
@@ -72,6 +80,15 @@
                 questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
                 addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
 		displayPathHistory();
+
+		// Add send email button
+	        const sendEmailButton = document.createElement('button');
+	        sendEmailButton.textContent = 'Envoyer la synthèse par email';
+	        sendEmailButton.onclick = () => {
+	            sendEmail(pathHistory); // Call your sendEmail function
+	        };
+       		optionsContainer.appendChild(sendEmailButton); 
+		    
 	    } else {
                 questionElement.innerHTML = node.question;
                 document.getElementById('pathHistory').innerHTML = '';
