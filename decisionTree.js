@@ -62,7 +62,8 @@ q_couleur_LED: {
     "Rouge clignotant": "q_frein" }  },
 
 q_temps_charge: {
-  question: "Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks ?",
+"  question: ""Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks dans votre véhicule?
+"","
   isEndpoint: false,
   input: false,
   options: {
@@ -309,7 +310,7 @@ q_chargeur_DC: {
   input: false,
   options: {
     "Oui": "tester_charge_DC",
-    "Non": "FIN_cas_non_prevu" }  },
+    "Non": "debrancher_et_reinitialisation" }  },
 
 tester_charge_DC: {
   question: "Tester la charge sur la borne DC. Les LED au niveau du camion sont-elles vert clignotant ?",
@@ -327,7 +328,7 @@ FIN_prevenir_concession: {
     "Recommencer": "debut" }  },
 
 FIN_effectuer_tournee: {
-  question: "La tournée peut être assurée mais des vérifications complémentaires devront être faites au retour du véhicule. Bonne route !",
+  question: "Finissez la charge rapide. La tournée peut alors être assurée. Des vérifications complémentaires devront être faites au retour du véhicule. Bonne route !",
   isEndpoint: true,
   input: false,
   options: {
@@ -353,7 +354,7 @@ q_regulation: {
     "Non": "q_doute_vehicule" }  },
 
 q_doute_vehicule: {
-  question: "Le défaut est-il reproductible à votre dépôt avec une configuration borne / camion identique?",
+  question: "Le défaut est-il reproductible à votre dépôt, avec une autre borne de type identique?",
   isEndpoint: false,
   input: false,
   options: {
@@ -361,7 +362,7 @@ q_doute_vehicule: {
     "Non": "FIN_gestionnaire_flotte" }  },
 
 FIN_gestionnaire_flotte: {
-  question: "Le cas que vous rencontrez est un problème complexe qui nécessite une analyse spécifique, hors des cas prévus dans ce guide.<br/><br/>Contactez le gestionnaire de flotte.",
+  question: "Le cas que vous rencontrez est un problème complexe qui nécessite une analyse spécifique, hors des cas prévus dans ce guide.<br/><br/>Contactez le gestionnaire de flotte chez Renault Trucks.",
   isEndpoint: true,
   input: false,
   options: {
@@ -376,7 +377,7 @@ tester_puissance_max: {
     "Non": "q_doute_vehicule" }  },
 
 FIN_reglage_puissance: {
-  question: "Pas de défaut matériel identifié ; il faut valider le réglage de la puissance disponible. ",
+  question: "Pas de défaut matériel identifié ; vérifiez la puissance disponible au niveau de la borne.",
   isEndpoint: true,
   input: false,
   options: {
@@ -444,7 +445,8 @@ q_essayer_autre_borne: {
     "Rouge": "FIN_prevenir_concession" }  },
 
 q_test_temps_charge: {
-  question: "Vérifiez le temps de charge. Est il conforme?",
+"  question: ""Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks dans votre véhicule?
+"","
   isEndpoint: false,
   input: false,
   options: {
