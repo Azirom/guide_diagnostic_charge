@@ -65,11 +65,19 @@
         }
 
 	function sendEmail(pathHistory) {
-		  const recipientEmail = "benoit.plassat@renault-trucks.com";
-		  const subject = "Resultats DiagPlug";
-		  const body = `${JSON.stringify(pathHistory, null, 2)}`;
-		  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-		  window.location.href = mailtoLink;
+		const recipientEmail = "benoit.plassat@renault-trucks.com";
+		const subject = "Resultats DiagPlug";
+		const body = `${JSON.stringify(pathHistory, null, 2)}`;
+		const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+		// Create a temporary <a> element
+		const link = document.createElement('a');
+		link.href = mailtoLink;
+		link.target = '_blank'; // Open in a new tab/window (optional)
+		
+		// Simulate a click on the link
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
 	}
 	    
 	function showNode(nodeId) {
