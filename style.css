@@ -125,3 +125,9 @@ input[type="text"] {
 	margin-top: 5px;
 	margin-left: 20px;
 }
+#privacy-notice {
+	text-align: center;
+	font-size: 0.7em;
+	color: #666;
+	margin-bottom: 20px;
+}
