@@ -62,8 +62,7 @@ q_couleur_LED: {
     "Rouge clignotant": "q_frein" }  },
 
 q_temps_charge: {
-"  question: ""Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks dans votre véhicule?
-"","
+  question: "Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks dans votre véhicule?",
   isEndpoint: false,
   input: false,
   options: {
@@ -445,8 +444,7 @@ q_essayer_autre_borne: {
     "Rouge": "FIN_prevenir_concession" }  },
 
 q_test_temps_charge: {
-"  question: ""Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks dans votre véhicule?
-"","
+  question: "Vérifier au tableau de bord le temps restant avant fin de charge. Le temps affiché est-il conforme à la grille fournie par Renault Trucks dans votre véhicule?",
   isEndpoint: false,
   input: false,
   options: {
