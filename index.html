@@ -91,7 +91,7 @@
 		    
 		// Send email button
 	        const sendEmailButton = document.createElement('button');
-	        sendEmailButton.textContent = '(Optionel)<br/>Envoyer la synthèse par email';
+	        sendEmailButton.innerHTML = '(Optionel)<br/>Envoyer la synthèse par email';
 	        sendEmailButton.onclick = () => {
 	            sendEmail(pathHistory); // Call your sendEmail function
 	        };
