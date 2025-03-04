@@ -87,6 +87,7 @@
 	        sendEmailButton.onclick = () => {
 	            sendEmail(pathHistory); // Call your sendEmail function
 	        };
+		sendEmailButton.className ='send-email-button';
        		optionsContainer.appendChild(sendEmailButton); 
 		
 		addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
