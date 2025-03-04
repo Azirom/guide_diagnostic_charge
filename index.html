@@ -68,7 +68,7 @@
 		const recipientEmail = "benoit.plassat@renault-trucks.com";
 		const subject = "Resultats DiagPlug";
 		const body = pathHistory.map(item => {
-    			return `Question: ${item.question}\nAnswer: ${item.answer}\n`;
+    			return `Question: ${item.question}\nRéponse: ${item.answer}\n`;
   		}).join("\n"); // Join with newline characters	
 		const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 		// Create a temporary <a> element
