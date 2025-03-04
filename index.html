@@ -99,6 +99,7 @@
 	        sendEmailButton.innerHTML = '(Optionel)<br/>Envoyer la synthèse par email';
 	        sendEmailButton.onclick = () => {
 	            sendEmail(pathHistory); // Call your sendEmail function
+		    sendEmailButton.remove(); 
 	        };
 		sendEmailButton.className ='send-email-button';
        		optionsContainer.appendChild(sendEmailButton); 
