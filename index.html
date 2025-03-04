@@ -77,17 +77,18 @@
             const questionElement = document.getElementById('questionText');
             
             if (node.isEndpoint) {
-                questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
-                addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
-		displayPathHistory();
-
-		// Add send email button
+		questionElement.innerHTML = '<div class="conclusion">Conclusion :</div>' + node.question;
+		
+		// Send email button
 	        const sendEmailButton = document.createElement('button');
 	        sendEmailButton.textContent = 'Envoyer la synthèse par email';
 	        sendEmailButton.onclick = () => {
 	            sendEmail(pathHistory); // Call your sendEmail function
 	        };
        		optionsContainer.appendChild(sendEmailButton); 
+		
+		addToHistory(nodeId, 'CONCLUSION: '+node.question, "");
+		displayPathHistory();    
 		    
 	    } else {
                 questionElement.innerHTML = node.question;
