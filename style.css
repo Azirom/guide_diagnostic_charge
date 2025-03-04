@@ -66,6 +66,16 @@ body {
 		button:hover {
 	background-color: #0056b3;
 }
+.send-email-button {
+	padding: 10px;
+	font-size: 0.9em;
+	background-color: #4CAF50;
+	color: #4a5568;
+	margin-top: 20px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
 .restart-button {
 	padding: 10px;
 	font-size: 0.9em;
@@ -79,7 +89,7 @@ body {
 .restart-button:hover {
 	background-color: #cbd5e0;
 }
-		input[type="text"] {
+	input[type="text"] {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
@@ -115,23 +125,4 @@ body {
 	color: #007bff;
 	margin-top: 5px;
 	margin-left: 20px;
-}
-
-.send-email-button {
-	background-color: #4CAF50; /* Green */
-	border: none;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	padding: 10px;
-	font-size: 0.9em;
-	color: #4a5568;
-	margin-top: 20px;
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	
 }
