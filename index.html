@@ -130,6 +130,7 @@
 			}
     		});
                 optionsContainer.appendChild(input);
+		input.focus();
             }
             
             Object.entries(node.options).forEach(([text, nextNode]) => {
@@ -158,12 +159,6 @@
                 
                 optionsContainer.appendChild(button);
             });	
-
-	    if(node.input) {
-		requestAnimationFrame(() => {
-            		input.focus();
-        	});
-	    }
         }
 
         // Initialize with the start node
