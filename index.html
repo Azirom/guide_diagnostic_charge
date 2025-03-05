@@ -160,9 +160,9 @@
             });	
 
 	    if(node.input) {
-    			setTimeout(() => {
-        			input.focus();
-    			}, 0); // Use 0 milliseconds to execute as soon as possibleinput.focus(); 
+		requestAnimationFrame(() => {
+            		input.focus();
+        	});
 	    }
         }
 
